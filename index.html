@@ -3,35 +3,41 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Home | Currency Converter</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Currency Converter - Home</title>
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-  <header>
-    <h1>Welcome to the Currency Converter Website</h1>
-    <nav>
-      <ul>
-        <li><a href="index.html">Home</a></li>
-        <li><a href="about.html">About</a></li>
-        <li><a href="services.html">Services</a></li>
-        <li><a href="converter.html">Currency Converter</a></li>
-        <li><a href="faq.html">FAQ</a></li>
-        <li><a href="blog.html">Blog</a></li>
-        <li><a href="team.html">Team</a></li>
-        <li><a href="testimonials.html">Testimonials</a></li>
-        <li><a href="contact.html">Contact</a></li>
-        <li><a href="privacy.html">Privacy Policy</a></li>
-      </ul>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2>Your One-Stop Solution for Currency Conversion</h2>
-      <p>Quickly and accurately convert currencies using our easy-to-use platform.</p>
-    </section>
-  </main>
-  <footer>
-    <p>&copy; 2025 Currency Converter. All rights reserved.</p>
-  </footer>
+  <div class="container">
+    <h1>Currency Converter</h1>
+    <form id="currency-form">
+      <div class="form-group">
+        <label for="amount">Amount:</label>
+        <input type="number" id="amount" placeholder="Enter amount" required>
+      </div>
+      <div class="form-group">
+        <label for="from-currency">From:</label>
+        <select id="from-currency" required>
+          <option value="USD">USD - US Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="INR">INR - Indian Rupee</option>
+        </select>
+      </div>
+      <div class="form-group">
+        <label for="to-currency">To:</label>
+        <select id="to-currency" required>
+          <option value="USD">USD - US Dollar</option>
+          <option value="EUR">EUR - Euro</option>
+          <option value="GBP">GBP - British Pound</option>
+          <option value="INR">INR - Indian Rupee</option>
+        </select>
+      </div>
+      <button type="submit">Convert</button>
+    </form>
+    <div id="result"></div>
+    <a href="exchange-rates.html">View Exchange Rates</a>
+    <a href="about.html">About</a>
+  </div>
+  <script src="script.js"></script>
 </body>
 </html>
